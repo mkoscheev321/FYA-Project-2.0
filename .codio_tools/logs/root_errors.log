@@ -1,0 +1,13 @@
+2026/05/30 16:42:08 [codio-tools] close tcp 10.14.89.123:5591->192.168.11.131:46050: use of closed network connection, error while closing websocket connection
+2026/05/30 16:42:08 [codio-tools] error send outgoing message terminal-cnVuIGl0ISEh: write tcp 10.14.89.123:5591->192.168.11.131:46050: use of closed network connection
+2026/05/30 16:44:32 [codio-tools] error send outgoing message terminal-YmFja2VuZC0xNzgwMTU5NDcwODAz: write tcp 10.14.89.123:5591->192.168.11.136:57010: use of closed network connection
+2026/05/30 16:44:32 [codio-tools] close tcp 10.14.89.123:5591->192.168.11.136:57010: use of closed network connection, error while closing websocket connection
+2026/05/30 16:46:08 [codio-tools] connection terminal-cnVuIGl0ISEh closed with error: unable to grab next reader
+2026/05/30 16:46:14 [codio-tools] close tcp 10.14.89.123:5591->192.168.10.208:40886: use of closed network connection, error while closing websocket connection
+2026/05/30 16:46:34 [codio-tools] close tcp 10.14.89.123:5591->192.168.10.208:40888: use of closed network connection, error while closing websocket connection
+2026/05/30 16:46:47 [codio-tools] close tcp 10.14.89.123:5591->192.168.11.136:51324: use of closed network connection, error while closing websocket connection
+2026/05/30 16:49:38 [codio-tools] close tcp 10.14.89.123:5591->192.168.11.131:36152: use of closed network connection, error while closing websocket connection
+2026/05/30 16:50:13 [codio-tools] close tcp 10.14.89.123:5591->192.168.10.31:47066: use of closed network connection, error while closing websocket connection
+2026/05/31 23:46:59 [codio-tools] close tcp 10.13.105.126:5591->192.168.11.136:49264: use of closed network connection, error while closing websocket connection
+2026/06/01 00:15:26 [codio-tools] connection terminal-YmFja2VuZC0xNzgwMjcxOTAxMDI1 closed with error: unable to grab next reader
+2026/06/01 00:15:26 [codio-tools] connection terminal-cnVuIGl0ISEh closed with error: unable to grab next reader
