@@ -18,3 +18,10 @@
 2026/06/01 01:24:48 [codio-tools] connection terminal-cnVuIGl0ISEh closed with error: unable to read from pty/cmd: read /dev/ptmx: input/output error
 2026/06/01 01:24:48 [codio-tools] close tcp 10.13.105.126:5591->192.168.11.136:58210: use of closed network connection, error while closing websocket connection
 2026/06/02 03:50:36 [codio-tools] close tcp 10.12.53.37:5591->192.168.11.131:40932: use of closed network connection, error while closing websocket connection
+2026/06/02 04:20:36 [codio-tools] connection terminal-YmFja2VuZC0xNzgwMzcyMjM4MDYz closed with error: unable to grab next reader
+2026/06/02 04:27:57 [codio-tools] error send outgoing message terminal-YmFja2VuZC0xNzgwMzcyMjM4MDYz: write tcp 10.12.53.37:5591->192.168.11.131:58056: use of closed network connection
+2026/06/02 04:27:57 [codio-tools] connection terminal-YmFja2VuZC0xNzgwMzcyMjM4MDYz closed with error: unable to read from pty/cmd: read /dev/ptmx: input/output error
+2026/06/02 04:27:57 [codio-tools] close tcp 10.12.53.37:5591->192.168.11.131:58056: use of closed network connection, error while closing websocket connection
+2026/06/04 14:50:56 [codio-tools] connection terminal-cnVuIGl0ISEh closed with error: unable to grab next reader
+2026/06/04 15:15:13 [codio-tools] connection terminal-cnVuIGl0ISEh closed with error: unable to grab next reader
+2026/06/04 15:36:00 [codio-tools] close tcp 10.13.98.183:5591->192.168.10.208:39160: use of closed network connection, error while closing websocket connection

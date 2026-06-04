@@ -5,26 +5,30 @@ import random
 pygame.init()
 
 # Screen dimensions and setup
-screen_width, screen_height = 1000, 600
+screen_width, screen_height = 800, 210
 screen = pygame.display.set_mode((screen_width, screen_height))
 pygame.display.set_caption("Platformer Game")
 
 # Define colors
-background_color = (0, 0, 0)  # Black
-platform_color = (0,255,0) # green
+background_color = (255,192,203)  # Pink
+platform_color = (34,139,34) # green
+block_color = (0,0,0) # green
+
 
 # Frame rate control
 clock = pygame.time.Clock()
 
 
 # Player setup
-player_width, player_height = 30, 30  # Rectangle dimensions
-player_speed = 10  # Speed of movement
+player_width, player_height = 15, 15  # Rectangle dimensions
+player_speed = 5  # Speed of movement
 player_color = (255, 0, 0)  # Red
-gravity = 1
+gravity = 1.5
 
 #Game setup
 level = 1
+startx = 20
+starty = screen_height - 20
 
 class Player(pygame.sprite.Sprite):
     def __init__(self):
@@ -35,8 +39,8 @@ class Player(pygame.sprite.Sprite):
         self.image = pygame.Surface((player_width, player_height))
         self.image.fill(player_color)  
         self.rect = self.image.get_rect()
-        self.rect.x = (screen_width - player_width) // 2
-        self.rect.y = screen_height - 50
+        self.rect.x = startx
+        self.rect.y = starty
         self.movex = 0
         self.movey = 0
         self.on_ground = False
@@ -46,8 +50,8 @@ class Player(pygame.sprite.Sprite):
         self.rect.y = yloc
 
     def apply_gravity(self):
-        self.movey += gravity
-        self.on_ground = False
+        if not self.on_ground:
+          self.movey += gravity
       
         # Stop falling at bottom of screen
         if self.rect.bottom >= screen_height:
@@ -64,7 +68,7 @@ class Player(pygame.sprite.Sprite):
 
     def jump(self):
       if self.on_ground:
-          self.movey = -15
+          self.movey = -10
           self.on_ground = False
 
     def collide_platforms(self, platforms):
@@ -80,8 +84,14 @@ class Player(pygame.sprite.Sprite):
       else:
           if self.rect.bottom < screen_height:  # not on floor either
             self.on_ground = False
+    
+    def hitHarm(self, harmList):
+      hits = pygame.sprite.spritecollide(self, harmList, False)
+      if hits:
+        self.rect.x = startx
+        self.rect.y = starty
 
-    def update(self, platforms):
+    def update(self, platforms, harmList):
         keys = pygame.key.get_pressed()
         if keys[pygame.K_LEFT]:
             self.movex = -player_speed
@@ -90,16 +100,18 @@ class Player(pygame.sprite.Sprite):
         else:
             self.movex = 0
 
-        self.apply_gravity()
-
+        self.rect.y += self.movey
         self.collide_platforms(platforms)
+        self.apply_gravity()
         
         if keys[pygame.K_SPACE] or keys[pygame.K_UP]:
             self.jump()
 
         self.rect.x += self.movex
-        self.rect.y += self.movey
+        #self.rect.y += self.movey #its above now
 
+        #check if hit harm
+        self.hitHarm(harmList)
         # Clamp to screen edges
         self.rect.left = max(0, self.rect.left)
         self.rect.right = min(screen_width, self.rect.right)
@@ -107,10 +119,38 @@ class Player(pygame.sprite.Sprite):
 
 
 class Platform(pygame.sprite.Sprite):
-    def __init__(self, xloc, yloc, width=100, height=20):
+    def __init__(self, xloc, yloc, width=50, height=10):
         pygame.sprite.Sprite.__init__(self)
         self.image = pygame.Surface((width, height))
         self.image.fill(platform_color) 
+        self.rect = self.image.get_rect()
+        self.rect.x = xloc
+        self.rect.y = yloc
+    def setCoord(self, xloc, yloc):
+        self.rect.x = xloc
+        self.rect.y = yloc
+
+class Block(pygame.sprite.Sprite):
+    def __init__(self, xloc, yloc, width=50, height=10):
+        pygame.sprite.Sprite.__init__(self)
+        self.image = pygame.Surface((width, height))
+        self.image.fill(block_color) 
+        self.rect = self.image.get_rect()
+        self.rect.x = xloc
+        self.rect.y = yloc
+    def setCoord(self, xloc, yloc, width, height):
+        self.image = pygame.transform.scale(self.image, (width, height))
+        self.rect = self.image.get_rect()
+        self.rect.x = xloc
+        self.rect.y = yloc
+
+
+
+class HarmObject(pygame.sprite.Sprite):
+    def __init__(self, xloc, yloc, width=45, height=15):
+        pygame.sprite.Sprite.__init__(self)
+        self.image = pygame.image.load("3Triangles.png").convert_alpha()
+        self.image = pygame.transform.scale(self.image, (width, height))  # resize if needed
         self.rect = self.image.get_rect()
         self.rect.x = xloc
         self.rect.y = yloc
@@ -137,10 +177,15 @@ platform3 = Platform(-200,0)
 platform4 = Platform(-200,0)
 platform5 = Platform(-200,0)
 platform6 = Platform(-200,0)
-all_sprites = pygame.sprite.Group(player)
+harm1 = HarmObject(-200,0)
 keyList = pygame.sprite.Group(key)
+harmList = pygame.sprite.Group(harm1)
 platforms = pygame.sprite.Group(platform1, platform2, platform3,platform4,platform5,platform6)
+
+all_sprites = pygame.sprite.Group(player)
 all_sprites.add(platform1, platform2, platform3,platform4,platform5,platform6)
+all_sprites.add(harm1)
+all_sprites.add(key)
 
 
 
@@ -158,10 +203,12 @@ while running:
 
     #setup level
     if level == 1:
-      platform1.setCoord(200,500)
+      platform1.setCoord(200,180)
       platform2.setCoord(400,400)
       platform3.setCoord(600,300)
       platform4.setCoord(900,300)
+      harm1.setCoord(100, 195)
+      key.setCoord(700, 195)
       levelUpdated = True
     elif level == 2:
       platform1.setCoord(200,500)
@@ -171,7 +218,7 @@ while running:
       levelUpdated = True
 
     ###
-    player.update(platforms)
+    player.update(platforms, harmList)
 
     #CHECK level
     hits = pygame.sprite.spritecollide(player, keyList, False)

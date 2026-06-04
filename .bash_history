@@ -82,3 +82,14 @@ git pull
 git add .
 git status
 python3 window.py
+git add .
+ls
+cd ..
+pwd
+git add .
+git status
+git commit -m "levels working!"
+git push
+git pul
+git pull
+python3 window.py

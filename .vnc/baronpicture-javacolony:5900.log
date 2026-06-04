@@ -672,3 +672,127 @@ Tue Jun  2 03:50:05 2026
 
 Tue Jun  2 03:50:06 2026
  VNCSConnST:  Client pixel format depth 24 (32bpp) little-endian bgr888
+
+Tue Jun  2 04:20:36 2026
+ VNCSConnST:  closing 127.0.0.1::46726: Clean disconnection
+ EncodeManager: Framebuffer updates: 1277
+ EncodeManager:   Tight:
+ EncodeManager:     Solid: 227 rects, 2.50921 Mpixels
+ EncodeManager:            3.54688 KiB (1:2764.2 ratio)
+ EncodeManager:     Bitmap RLE: 781 rects, 841.746 kpixels
+ EncodeManager:                 24.8184 KiB (1:132.854 ratio)
+ EncodeManager:     Indexed RLE: 545 rects, 543.591 kpixels
+ EncodeManager:                  24.7939 KiB (1:85.8996 ratio)
+ EncodeManager:   Tight (JPEG):
+ EncodeManager:     Full Colour: 6 rects, 45.903 kpixels
+ EncodeManager:                  20.6201 KiB (1:8.69922 ratio)
+ EncodeManager:   Total: 1.559 krects, 3.94045 Mpixels
+ EncodeManager:          73.7793 KiB (1:208.875 ratio)
+ Connections: closed: 127.0.0.1::46726
+ ComparingUpdateTracker: 904.911 Mpixels in / 2.72996 Mpixels out
+ ComparingUpdateTracker: (1:331.474 ratio)
+X connection to :0 broken (explicit kill or server shutdown).
+
+Tue Jun  2 04:27:58 2026
+ ComparingUpdateTracker: 0 pixels in / 0 pixels out
+ ComparingUpdateTracker: (1:-nan ratio)
+The X session exited with status 1!
+Killing Xtigervnc process ID 136... success!
+
+Xvnc TigerVNC 1.12.0 - built 2022-03-25 17:06
+Copyright (C) 1999-2021 TigerVNC Team and many others (see README.rst)
+See https://www.tigervnc.org for information on TigerVNC.
+Underlying X server release 12101003, X.Org
+
+
+Thu Jun  4 14:47:44 2026
+ vncext:      VNC extension running!
+ vncext:      Listening for VNC connections on local interface(s), port 5900
+ vncext:      created VNC server for screen 0
+3NI3X0 New Xtigervnc server 'baronpicture-javacolony:0 (codio)' on port 5900 for display :0.
+3NI3X0 Use xtigervncviewer -SecurityTypes None :0 to connect to the VNC server.
+[mi] mieq: warning: overriding existing handler (nil) with 0x5ba5a3733400 for event 2
+[mi] mieq: warning: overriding existing handler (nil) with 0x5ba5a3733400 for event 3
+Openbox-Message: Unable to find a valid menu file "/var/lib/openbox/debian-menu.xml"
+
+Thu Jun  4 14:47:50 2026
+ Connections: accepted: 127.0.0.1::48458
+ SConnection: Client needs protocol version 3.8
+ SConnection: Client requests security type None(1)
+ VNCSConnST:  Server default pixel format depth 24 (32bpp) little-endian rgb888
+ VNCSConnST:  Client pixel format depth 24 (32bpp) little-endian bgr888
+ ComparingUpdateTracker: 1.176 Mpixels in / 0 pixels out
+ ComparingUpdateTracker: (1:inf ratio)
+
+Thu Jun  4 14:51:44 2026
+ VNCSConnST:  closing 127.0.0.1::48458: Clean disconnection
+ EncodeManager: Framebuffer updates: 1495
+ EncodeManager:   Tight:
+ EncodeManager:     Solid: 265 rects, 4.55424 Mpixels
+ EncodeManager:            4.14062 KiB (1:4297.2 ratio)
+ EncodeManager:     Bitmap RLE: 1.51 krects, 834.476 kpixels
+ EncodeManager:                 46.9082 KiB (1:69.8677 ratio)
+ EncodeManager:     Indexed RLE: 100 rects, 81.414 kpixels
+ EncodeManager:                  11.3076 KiB (1:28.2283 ratio)
+ EncodeManager:   Tight (JPEG):
+ EncodeManager:     Full Colour: 31 rects, 159.228 kpixels
+ EncodeManager:                  92.9639 KiB (1:6.69451 ratio)
+ EncodeManager:   Total: 1.906 krects, 5.62935 Mpixels
+ EncodeManager:          155.32 KiB (1:141.72 ratio)
+ Connections: closed: 127.0.0.1::48458
+ ComparingUpdateTracker: 2.37947 Gpixels in / 2.04255 Mpixels out
+ ComparingUpdateTracker: (1:1164.95 ratio)
+
+Thu Jun  4 14:55:35 2026
+ Connections: accepted: 127.0.0.1::58346
+ SConnection: Client needs protocol version 3.8
+ SConnection: Client requests security type None(1)
+ VNCSConnST:  Server default pixel format depth 24 (32bpp) little-endian rgb888
+ VNCSConnST:  Client pixel format depth 24 (32bpp) little-endian bgr888
+
+Thu Jun  4 15:30:30 2026
+ VNCSConnST:  closing 127.0.0.1::58346: Clean disconnection
+ EncodeManager: Framebuffer updates: 17735
+ EncodeManager:   Tight:
+ EncodeManager:     Solid: 3.973 krects, 9.82986 Mpixels
+ EncodeManager:            62.0781 KiB (1:619.291 ratio)
+ EncodeManager:     Bitmap RLE: 5.558 krects, 1.07488 Mpixels
+ EncodeManager:                 157.606 KiB (1:27.0539 ratio)
+ EncodeManager:     Indexed RLE: 8.933 krects, 3.7823 Mpixels
+ EncodeManager:                  385.026 KiB (1:38.6448 ratio)
+ EncodeManager:   Tight (JPEG):
+ EncodeManager:     Full Colour: 131 rects, 620.201 kpixels
+ EncodeManager:                  351.259 KiB (1:6.90145 ratio)
+ EncodeManager:   Total: 18.595 krects, 15.3072 Mpixels
+ EncodeManager:          955.97 KiB (1:62.7758 ratio)
+ Connections: closed: 127.0.0.1::58346
+ ComparingUpdateTracker: 20.1723 Gpixels in / 14.099 Mpixels out
+ ComparingUpdateTracker: (1:1430.76 ratio)
+ Connections: accepted: 127.0.0.1::48674
+ SConnection: Client needs protocol version 3.8
+ SConnection: Client requests security type None(1)
+ VNCSConnST:  Server default pixel format depth 24 (32bpp) little-endian rgb888
+ VNCSConnST:  Client pixel format depth 24 (32bpp) little-endian bgr888
+
+Thu Jun  4 15:30:48 2026
+ VNCSConnST:  closing 127.0.0.1::48674: Clean disconnection
+ EncodeManager: Framebuffer updates: 1
+ EncodeManager:   Tight:
+ EncodeManager:     Solid: 4 rects, 1.19054 Mpixels
+ EncodeManager:            64 B (1:74409.5 ratio)
+ EncodeManager:     Bitmap RLE: 1 rects, 160 pixels
+ EncodeManager:                 68 B (1:9.58824 ratio)
+ EncodeManager:   Total: 5 rects, 1.1907 Mpixels
+ EncodeManager:          132 B (1:36082.3 ratio)
+ Connections: closed: 127.0.0.1::48674
+ ComparingUpdateTracker: 0 pixels in / 0 pixels out
+ ComparingUpdateTracker: (1:-nan ratio)
+
+Thu Jun  4 15:30:51 2026
+ Connections: accepted: 127.0.0.1::53016
+ SConnection: Client needs protocol version 3.8
+ SConnection: Client requests security type None(1)
+ VNCSConnST:  Server default pixel format depth 24 (32bpp) little-endian rgb888
+
+Thu Jun  4 15:30:52 2026
+ VNCSConnST:  Client pixel format depth 24 (32bpp) little-endian bgr888
