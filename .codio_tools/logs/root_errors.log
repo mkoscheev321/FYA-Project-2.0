@@ -25,3 +25,20 @@
 2026/06/04 14:50:56 [codio-tools] connection terminal-cnVuIGl0ISEh closed with error: unable to grab next reader
 2026/06/04 15:15:13 [codio-tools] connection terminal-cnVuIGl0ISEh closed with error: unable to grab next reader
 2026/06/04 15:36:00 [codio-tools] close tcp 10.13.98.183:5591->192.168.10.208:39160: use of closed network connection, error while closing websocket connection
+2026/06/04 16:16:04 [codio-tools] connection terminal-cnVuIGl0ISEh closed with error: unable to grab next reader
+2026/06/04 16:16:04 [codio-tools] connection terminal-YmFja2VuZC0xNzgwNTg3MzYzMTM3 closed with error: unable to grab next reader
+2026/06/04 16:28:19 [codio-tools] connection terminal-cnVuIGl0ISEh closed with error: unable to grab next reader
+2026/06/04 16:28:19 [codio-tools] connection terminal-YmFja2VuZC0xNzgwNTg3MzYzMTM3 closed with error: unable to grab next reader
+2026/06/04 16:51:05 [codio-tools] connection terminal-cnVuIGl0ISEh closed with error: unable to grab next reader
+2026/06/04 16:51:50 [codio-tools] connection terminal-YmFja2VuZC0xNzgwNTg3MzYzMTM3 closed with error: unable to grab next reader
+2026/06/04 16:54:06 [codio-tools] connection terminal-YmFja2VuZC0xNzgwNTg3MzYzMTM3 closed with error: unable to read from pty/cmd: read /dev/ptmx: input/output error
+2026/06/04 16:54:06 [codio-tools] close tcp 10.13.98.183:5591->192.168.10.31:57076: use of closed network connection, error while closing websocket connection
+2026/06/04 21:50:15 [codio-tools] connection terminal-cnVuIGl0ISEh closed with error: unable to grab next reader
+2026/06/04 21:53:47 [codio-tools] connection terminal-cnVuIGl0ISEh closed with error: unable to read from pty/cmd: read /dev/ptmx: input/output error
+2026/06/04 21:53:47 [codio-tools] close tcp 10.15.69.23:5591->192.168.11.136:57784: use of closed network connection, error while closing websocket connection
+2026/06/04 21:55:48 [codio-tools] connection terminal-cnVuIGl0ISEh closed with error: unable to grab next reader
+2026/06/04 22:01:59 [codio-tools] connection terminal-cnVuIGl0ISEh closed with error: unable to read from pty/cmd: read /dev/ptmx: input/output error
+2026/06/04 22:01:59 [codio-tools] close tcp 10.15.32.172:5591->192.168.10.208:47308: use of closed network connection, error while closing websocket connection
+2026/06/05 05:33:45 [codio-tools] connection terminal-cnVuIGl0ISEh closed with error: unable to read from pty/cmd: read /dev/ptmx: input/output error
+2026/06/05 05:33:45 [codio-tools] close tcp 10.16.125.16:5591->192.168.11.131:42206: use of closed network connection, error while closing websocket connection
+2026/06/05 14:39:06 [codio-tools] close tcp 10.13.187.18:5591->192.168.11.136:42370: use of closed network connection, error while closing websocket connection

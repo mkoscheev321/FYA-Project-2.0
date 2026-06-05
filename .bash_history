@@ -93,3 +93,10 @@ git push
 git pul
 git pull
 python3 window.py
+git add .
+cd ,,
+cd ..
+git add .
+git commit -m "harm class done "
+git push
+python3 window.py
