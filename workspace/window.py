@@ -30,7 +30,6 @@ pygame.mixer.music.play(-1)
 
 #set music volume 
 pygame.mixer.music.set_volume(.5)
->>>>>>> 08e8d2c46462b23579f5112116e8860d9763df1f
 
 # Frame rate
 clock = pygame.time.Clock()
