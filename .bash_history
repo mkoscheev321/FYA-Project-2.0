@@ -100,3 +100,27 @@ git add .
 git commit -m "harm class done "
 git push
 python3 window.py
+cd ..
+git add .
+git commit -m "level 1 done"
+git push
+git pull
+cd ..
+git pull
+ls -a
+pwd
+cd workspace
+ls
+./README.md
+./window.py
+python3 window.py
+python3 
+python3
+python3 .codio
+python3 window.py
+python3 skylyr-2.png
+python3 
+python3 .codio
+python3 window.py
+python3 skylyr-2.png
+python3 
