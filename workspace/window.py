@@ -1,8 +1,20 @@
 import pygame
 import random
+import os
+
 
 # Initializing
 pygame.init()
+font = pygame.font.Font(None, 36)
+GOLD = (255, 215, 0)
+
+try:
+    pygame.mixer.init()
+    pygame.mixer.music.load("cutemusic.mp3")
+    pygame.mixer.music.play(-1)
+    pygame.mixer.music.set_volume(.5)
+except pygame.error:
+    pass  # No audio device, just skip music
 
 # Frame rate
 clock = pygame.time.Clock()
@@ -51,7 +63,7 @@ def draw_ground():
 
 # Define colors
 background_color = (255, 192, 203)  # Pink
-platform_color = (34, 255, 255)      # Green
+platform_color = (94, 181, 36)      # Green
 block_color = platform_color        # Dark green
 
 # Frame rate control
@@ -158,6 +170,7 @@ class Player(pygame.sprite.Sprite):
             self.rect.y = starty
             scroll = 0
     def playerReset(self):
+      global scroll
       self.rect.x = startx
       self.rect.y = starty
       scroll = 0
@@ -244,7 +257,7 @@ class HarmObject(pygame.sprite.Sprite):
 class Key(pygame.sprite.Sprite):
     def __init__(self, xloc, yloc, width=20, height=20):
         pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.image.load("sun.png").convert_alpha()
+        self.image = pygame.image.load("key1.png").convert_alpha()
         self.image = pygame.transform.scale(self.image, (width, height))
         #self.image = pygame.Surface((width, height))
         #self.image.fill((255, 238, 140))  # Yellow
@@ -255,11 +268,17 @@ class Key(pygame.sprite.Sprite):
     def setCoord(self, xloc, yloc):
         self.rect.x = xloc
         self.rect.y = yloc
+
+    def changeImage(self):
+      global level
+      self.image = pygame.image.load(f"key{level}.png").convert_alpha()
+      self.image = pygame.transform.scale(self.image, (20, 20))  # resize if needed
+      self.rect = self.image.get_rect()
 
 class startImage(pygame.sprite.Sprite):
-    def __init__(self, xloc = 0, yloc = 0, width=800, height=210):
+    def __init__(self, xloc = 0, yloc = -500, width=800, height=210):
         pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.image.load("startImage.jpg").convert_alpha()
+        self.image = pygame.image.load("startImage.png").convert_alpha()
         self.image = pygame.transform.scale(self.image, (width, height))
         #self.image = pygame.Surface((width, height))
         #self.image.fill((255, 238, 140))  # Yellow
@@ -269,11 +288,27 @@ class startImage(pygame.sprite.Sprite):
     def setCoord(self, xloc, yloc):
         self.rect.x = xloc
         self.rect.y = yloc
+
+class endGame(pygame.sprite.Sprite):
+    def __init__(self, xloc = 0, yloc = -500, width=800, height=210):
+        pygame.sprite.Sprite.__init__(self)
+        self.image = pygame.image.load("endGame.png").convert_alpha()
+        self.image = pygame.transform.scale(self.image, (width, height))
+        #self.image = pygame.Surface((width, height))
+        #self.image.fill((255, 238, 140))  # Yellow
+        self.rect = self.image.get_rect()
+        self.rect.x = xloc
+        self.rect.y = yloc
+    def setCoord(self, xloc, yloc):
+        self.rect.x = xloc
+        self.rect.y = yloc
+
 
 
 
 # Sprite instantiation
 startImage = startImage()
+endImage = endGame()
 player = Player()
 key = Key(920, 240)
 platform1 = Platform(-200, 0)
@@ -306,6 +341,7 @@ all_sprites.add(harm1, harm2, harm3, harm4, harm5, harm6, harm7, harm8, harm9)
 all_sprites.add(block1, block2, block3)
 all_sprites.add(key)
 all_sprites.add(startImage)
+all_sprites.add(endImage)
 
 levelUpdated = False
 
@@ -325,7 +361,7 @@ while running:
     if key_pressed[pygame.K_LEFT] and scroll > 0:
         scroll -= 5
 
-    if key_pressed[pygame.K_RIGHT] and scroll < 2000:
+    if key_pressed[pygame.K_RIGHT] and scroll < 1000:
         scroll += 5
 
     # Draw the world
@@ -334,6 +370,7 @@ while running:
 
     # Setup level
     if level == 0:
+      startImage.setCoord(0,0)
       if key_pressed[pygame.K_SPACE]:
         level+=1
       
@@ -341,16 +378,22 @@ while running:
         if levelUpdated == False :
           player.playerReset()
           player.changeImage()
+          key.changeImage()
         startImage.setCoord(0,-500)
         platform1.setCoord(200, 140)
         platform2.setCoord(570, 110)
         platform3.setCoord(710, 80, 60, 10)
+        platform4.setCoord(-200, 0)
+        platform5.setCoord(-200, 0)
+        platform6.setCoord(-200, 0)
         harm1.setCoord(340, 150)
         harm2.setCoord(510, 190)
         harm3.setCoord(570, 190)
         harm4.setCoord(630, 190)
         harm5.setCoord(690, 190)
         harm6.setCoord(750, 190)
+        harm7.setCoord(-200, 0)
+        harm9.setCoord(-200, 0)
         block1.setCoord(290, 120, 50, 90)
         block2.setCoord(340, 170, 60, 40)
         block3.setCoord(400, 130, 110, 80)
@@ -360,6 +403,7 @@ while running:
         if levelUpdated == False :
           player.playerReset()
           player.changeImage()
+          key.changeImage()
         platform1.setCoord(120, 170)
         platform2.setCoord(30, 130)
         platform3.setCoord(140, 70)
@@ -380,6 +424,7 @@ while running:
       if levelUpdated == False :
           player.playerReset()
           player.changeImage()
+          key.changeImage()
       platform1.setCoord(100, 60)
       platform2.setCoord(190, 60)
       platform3.setCoord(310, 60)
@@ -401,16 +446,32 @@ while running:
       harm9.setCoord(520, 140)
       key.setCoord(120, 40)
       levelUpdated = True
+    elif level == 4:
+      endImage.setCoord(0, 0)
+      if key_pressed[pygame.K_r]:
+          endImage.setCoord(0, -500)
+          startImage.setCoord(0, -500)
+          key.setCoord(-200, -500)
+          level = 1
+          levelUpdated = False   # ← ADD THIS
+      elif key_pressed[pygame.K_q]:
+          running = False
 
     player.update(platforms, harmList, blocks)
 
     # Check level
     hits = pygame.sprite.spritecollide(player, keyList, False)
-    if hits:
+    if hits and 1 <= level <= 3: 
         level += 1
         levelUpdated = False
 
     all_sprites.draw(screen)
+    if 1 <= level <= 3:
+      level_text = font.render(f"Level: {level}", True, GOLD)
+    else:
+      level_text = font.render(f" ", True, GOLD)
+    screen.blit(level_text, (10,10))
+
 
     # Update the display
     pygame.display.flip()

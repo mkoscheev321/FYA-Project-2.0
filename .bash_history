@@ -124,3 +124,7 @@ python3 .codio
 python3 window.py
 python3 skylyr-2.png
 python3 
+python3 window.py
+python3 key1.png
+python3 window.py
+python3 
