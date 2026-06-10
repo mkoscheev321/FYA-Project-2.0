@@ -3,6 +3,15 @@ import random
 
 # Initializing
 pygame.init()
+pygame.mixer.init()
+
+#loading music file 
+pygame.mixer.load("cutemusic.mp3")
+
+pygame.mixer.music.play(-1)
+
+#set music volume 
+pygame.mixer.music.set_volume(.5)
 
 # Frame rate
 clock = pygame.time.Clock()
