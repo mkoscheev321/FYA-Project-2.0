@@ -11,7 +11,7 @@ pygame.mixer.load("cutemusic.mp3")
 pygame.mixer.music.play(-1)
 
 #set music volume 
-pygame.mixer.music.set_volume(.511)
+pygame.mixer.music.set_volume(.5111)
 
 # Frame rate
 clock = pygame.time.Clock()
