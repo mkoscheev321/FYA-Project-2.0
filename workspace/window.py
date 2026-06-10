@@ -5,8 +5,12 @@ import random
 pygame.init()
 pygame.mixer.init()
 
+font = pygame.font.Font(None, 36)
+GOLD = (255, 215, 0)
+
+
 #loading music file 
-pygame.mixer.load("cutemusic.mp3")
+pygame.mixer.music.load("cutemusic.mp3")
 
 pygame.mixer.music.play(-1)
 
@@ -341,6 +345,10 @@ while running:
     draw_bg()
     draw_ground()
 
+    #score tracking 
+
+   
+
     # Setup level
     if level == 0:
       if key_pressed[pygame.K_SPACE]:
@@ -420,6 +428,10 @@ while running:
         levelUpdated = False
 
     all_sprites.draw(screen)
+
+    level_text = font.render(f"Level: {level}", True, GOLD)
+    screen.blit(level_text, (10,10))
+
 
     # Update the display
     pygame.display.flip()
