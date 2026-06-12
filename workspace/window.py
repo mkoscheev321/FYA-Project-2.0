@@ -5,7 +5,6 @@ import os
 
 # Initializing
 pygame.init()
-<<<<<<< HEAD
 font = pygame.font.Font(None, 36)
 GOLD = (255, 215, 0)
 
@@ -16,20 +15,6 @@ try:
     pygame.mixer.music.set_volume(.5)
 except pygame.error:
     pass  # No audio device, just skip music
-=======
-pygame.mixer.init()
-
-font = pygame.font.Font(None, 36)
-GOLD = (255, 215, 0)
-
-
-#loading music file 
-pygame.mixer.music.load("cutemusic.mp3")
-
-pygame.mixer.music.play(-1)
-
-#set music volume 
-pygame.mixer.music.set_volume(.5)
 
 # Frame rate
 clock = pygame.time.Clock()
@@ -38,7 +23,7 @@ FPS = 70
 # Window size, color/background and name variables
 screen_width = 800
 screen_height = 210
-window_name = "cool"
+window_name = "Blossom Dash"
 
 gameIsRunning = True
 screen = pygame.display.set_mode((screen_width, screen_height))
@@ -220,8 +205,9 @@ class Player(pygame.sprite.Sprite):
 class Platform(pygame.sprite.Sprite):
     def __init__(self, xloc, yloc, width=platform_width, height=platform_height):
         pygame.sprite.Sprite.__init__(self)
-        self.image = pygame.Surface((width, height))
-        self.image.fill(platform_color)
+        self.image = pygame.image.load("platformImage.png").convert_alpha()
+        self.image = pygame.transform.scale(self.image, (width, height))
+        #self.image.fill(platform_color)
         self.rect = self.image.get_rect()
         self.rect.x = xloc
         self.rect.y = yloc
@@ -468,11 +454,11 @@ while running:
     elif level == 4:
       endImage.setCoord(0, 0)
       if key_pressed[pygame.K_r]:
+          level = 1
           endImage.setCoord(0, -500)
           startImage.setCoord(0, -500)
           key.setCoord(-200, -500)
-          level = 1
-          levelUpdated = False   # ← ADD THIS
+          levelUpdated = False   
       elif key_pressed[pygame.K_q]:
           running = False
 
@@ -491,9 +477,6 @@ while running:
       level_text = font.render(f" ", True, GOLD)
     screen.blit(level_text, (10,10))
 
-
-    level_text = font.render(f"Level: {level}", True, GOLD)
-    screen.blit(level_text, (10,10))
 
 
     # Update the display

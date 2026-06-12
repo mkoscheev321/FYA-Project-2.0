@@ -128,3 +128,35 @@ python3 window.py
 python3 key1.png
 python3 window.py
 python3 
+cd ..
+git add .
+git commit -m ""almost done"
+"
+git status
+git push
+git add .
+git commit -m ""almost done"
+"
+git commit -m "almost done""
+
+
+"
+git push
+git add .
+git commit -m "sound and score"
+git push
+git pull
+git config pull.rebase false
+git stash
+git pull
+git add .
+git pull
+git add .
+git commit -m "sound and score"
+git push
+git add .
+git commit -m "sound and score 2"
+git push
+python3 window.py
+python3 skylyr-2.png
+python3 window.py

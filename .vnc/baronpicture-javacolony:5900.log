@@ -1519,3 +1519,95 @@ Wed Jun 10 20:31:52 2026
  SConnection: Client requests security type None(1)
  VNCSConnST:  Server default pixel format depth 24 (32bpp) little-endian rgb888
  VNCSConnST:  Client pixel format depth 24 (32bpp) little-endian bgr888
+
+Wed Jun 10 20:57:53 2026
+ VNCSConnST:  closing 127.0.0.1::44888: Clean disconnection
+ EncodeManager: Framebuffer updates: 3603
+ EncodeManager:   Tight:
+ EncodeManager:     Solid: 3.585 krects, 4.9154 Mpixels
+ EncodeManager:            56.0156 KiB (1:343.525 ratio)
+ EncodeManager:     Bitmap RLE: 6.327 krects, 997.403 kpixels
+ EncodeManager:                 193.079 KiB (1:20.5628 ratio)
+ EncodeManager:     Indexed RLE: 46.821 krects, 70.3242 Mpixels
+ EncodeManager:                  14.2709 MiB (1:18.8356 ratio)
+ EncodeManager:   Tight (JPEG):
+ EncodeManager:     Full Colour: 8.575 krects, 76.1891 Mpixels
+ EncodeManager:                  27.0793 MiB (1:10.7365 ratio)
+ EncodeManager:   Total: 65.308 krects, 152.426 Mpixels
+ EncodeManager:          41.5935 MiB (1:13.9976 ratio)
+ Connections: closed: 127.0.0.1::44888
+ ComparingUpdateTracker: 14.1558 Gpixels in / 184.826 Mpixels out
+ ComparingUpdateTracker: (1:76.5898 ratio)
+X connection to :0 broken (explicit kill or server shutdown).
+
+Wed Jun 10 21:01:55 2026
+ ComparingUpdateTracker: 0 pixels in / 0 pixels out
+ ComparingUpdateTracker: (1:-nan ratio)
+The Xtigervnc server cleanly exited!
+
+Xvnc TigerVNC 1.12.0 - built 2022-03-25 17:06
+Copyright (C) 1999-2021 TigerVNC Team and many others (see README.rst)
+See https://www.tigervnc.org for information on TigerVNC.
+Underlying X server release 12101003, X.Org
+
+
+Thu Jun 11 22:29:02 2026
+ vncext:      VNC extension running!
+ vncext:      Listening for VNC connections on local interface(s), port 5900
+ vncext:      created VNC server for screen 0
+3NI3X0 New Xtigervnc server 'baronpicture-javacolony:0 (codio)' on port 5900 for display :0.
+3NI3X0 Use xtigervncviewer -SecurityTypes None :0 to connect to the VNC server.
+[mi] mieq: warning: overriding existing handler (nil) with 0x62e3bad1b400 for event 2
+[mi] mieq: warning: overriding existing handler (nil) with 0x62e3bad1b400 for event 3
+Openbox-Message: Unable to find a valid menu file "/var/lib/openbox/debian-menu.xml"
+
+Thu Jun 11 22:30:51 2026
+ Connections: accepted: 127.0.0.1::53642
+ SConnection: Client needs protocol version 3.8
+ SConnection: Client requests security type None(1)
+ VNCSConnST:  Server default pixel format depth 24 (32bpp) little-endian rgb888
+ VNCSConnST:  Client pixel format depth 24 (32bpp) little-endian bgr888
+ ComparingUpdateTracker: 0 pixels in / 0 pixels out
+ ComparingUpdateTracker: (1:-nan ratio)
+
+Thu Jun 11 23:53:12 2026
+ VNCSConnST:  closing 127.0.0.1::53642: Clean disconnection
+ EncodeManager: Framebuffer updates: 12909
+ EncodeManager:   Tight:
+ EncodeManager:     Solid: 14.076 krects, 13.52 Mpixels
+ EncodeManager:            219.938 KiB (1:240.875 ratio)
+ EncodeManager:     Bitmap RLE: 15.18 krects, 2.1588 Mpixels
+ EncodeManager:                 454.114 KiB (1:18.9616 ratio)
+ EncodeManager:     Indexed RLE: 121.309 krects, 78.9848 Mpixels
+ EncodeManager:                  24.3758 MiB (1:12.4177 ratio)
+ EncodeManager:   Tight (JPEG):
+ EncodeManager:     Full Colour: 61.829 krects, 393.831 Mpixels
+ EncodeManager:                  189.71 MiB (1:7.9229 ratio)
+ EncodeManager:   Total: 212.394 krects, 488.494 Mpixels
+ EncodeManager:          214.744 MiB (1:8.6889 ratio)
+ Connections: closed: 127.0.0.1::53642
+ ComparingUpdateTracker: 48.496 Gpixels in / 619.698 Mpixels out
+ ComparingUpdateTracker: (1:78.2575 ratio)
+X connection to :0 broken (explicit kill or server shutdown).
+
+Fri Jun 12 00:07:53 2026
+ ComparingUpdateTracker: 0 pixels in / 0 pixels out
+ ComparingUpdateTracker: (1:-nan ratio)
+The X session exited with status 1!
+Killing Xtigervnc process ID 136... success!
+
+Xvnc TigerVNC 1.12.0 - built 2022-03-25 17:06
+Copyright (C) 1999-2021 TigerVNC Team and many others (see README.rst)
+See https://www.tigervnc.org for information on TigerVNC.
+Underlying X server release 12101003, X.Org
+
+
+Fri Jun 12 22:35:41 2026
+ vncext:      VNC extension running!
+ vncext:      Listening for VNC connections on local interface(s), port 5900
+ vncext:      created VNC server for screen 0
+3NI3X0 New Xtigervnc server 'baronpicture-javacolony:0 (codio)' on port 5900 for display :0.
+3NI3X0 Use xtigervncviewer -SecurityTypes None :0 to connect to the VNC server.
+[mi] mieq: warning: overriding existing handler (nil) with 0x5ab27ef80400 for event 2
+[mi] mieq: warning: overriding existing handler (nil) with 0x5ab27ef80400 for event 3
+Openbox-Message: Unable to find a valid menu file "/var/lib/openbox/debian-menu.xml"

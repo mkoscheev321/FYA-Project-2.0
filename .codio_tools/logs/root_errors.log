@@ -79,3 +79,16 @@
 2026/06/10 20:12:41 [codio-tools] connection terminal-cnVuIGl0ISEh closed with error: unable to grab next reader
 2026/06/10 20:12:41 [codio-tools] connection terminal-YmFja2VuZC0xNzgxMTE4NDI5ODkw closed with error: unable to grab next reader
 2026/06/10 20:32:42 [codio-tools] close tcp 10.10.173.156:5591->192.168.11.131:55148: use of closed network connection, error while closing websocket connection
+2026/06/10 20:57:53 [codio-tools] connection terminal-cnVuIGl0ISEh closed with error: unable to grab next reader
+2026/06/10 20:57:53 [codio-tools] connection terminal-YmFja2VuZC0xNzgxMTE4NDI5ODkw closed with error: unable to grab next reader
+2026/06/10 21:01:54 [codio-tools] connection terminal-cnVuIGl0ISEh closed with error: unable to read from pty/cmd: read /dev/ptmx: input/output error
+2026/06/10 21:01:54 [codio-tools] close tcp 10.10.173.156:5591->192.168.10.208:38482: use of closed network connection, error while closing websocket connection
+2026/06/10 21:01:54 [codio-tools] connection terminal-YmFja2VuZC0xNzgxMTE4NDI5ODkw closed with error: unable to read from pty/cmd: read /dev/ptmx: input/output error
+2026/06/10 21:01:54 [codio-tools] close tcp 10.10.173.156:5591->192.168.10.208:38496: use of closed network connection, error while closing websocket connection
+2026/06/11 22:52:21 [codio-tools] close tcp 10.14.195.139:5591->192.168.11.131:45012: use of closed network connection, error while closing websocket connection
+2026/06/11 22:52:21 [codio-tools] error send outgoing message terminal-YmFja2VuZC0xNzgxMTE4NDI5ODkw: write tcp 10.14.195.139:5591->192.168.11.131:45012: use of closed network connection
+2026/06/11 22:52:22 [codio-tools] close tcp 10.14.195.139:5591->192.168.10.208:39828: use of closed network connection, error while closing websocket connection
+2026/06/11 23:53:11 [codio-tools] connection terminal-cnVuIGl0ISEh closed with error: unable to grab next reader
+2026/06/12 00:07:52 [codio-tools] connection terminal-cnVuIGl0ISEh closed with error: unable to read from pty/cmd: read /dev/ptmx: input/output error
+2026/06/12 00:07:52 [codio-tools] close tcp 10.14.195.139:5591->192.168.11.131:50730: use of closed network connection, error while closing websocket connection
+2026/06/12 22:35:40 [codio-tools] listen tcp :5591: bind: address already in use
